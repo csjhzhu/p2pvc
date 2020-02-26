@@ -1,6 +1,7 @@
 #include <cv.h>
 #include <highgui.h>
 #include <stdio.h>
+#include <opencv2/videoio/videoio_c.h>
 
 #include <p2plib.h>
 #include <display.h>
