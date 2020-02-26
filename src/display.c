@@ -136,12 +136,12 @@ int draw_braille(char *data, int width, int y, int channels) {
     char braille[8];
     attron(COLOR_PAIR(color));
     if (y % 4 == 0) {
-      sprintf(braille, "%ld", to_braille(0));
+      sprintf(braille, "%lu", to_braille(0));
     }
     if (intensity > intensity_threshold) {
-      sprintf(braille, "%ld", add_pixel(mvinch(row, j / 2), 3 - (y % 4), 1 - (j % 2), 1));
+      sprintf(braille, "%lu", add_pixel(mvinch(row, j / 2), 3 - (y % 4), 1 - (j % 2), 1));
     } else {
-      sprintf(braille, "%ld", add_pixel(mvinch(row, j / 2), 3 - (y % 4), 1 - (j % 2), 0));
+      sprintf(braille, "%lu", add_pixel(mvinch(row, j / 2), 3 - (y % 4), 1 - (j % 2), 0));
     }
     mvaddstr(row, j / 2, braille);
   }
